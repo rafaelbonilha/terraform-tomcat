@@ -1,9 +1,9 @@
 provider "local"{}
 # Start a container
-resource "docker_container" "application" {
-  image = "${docker_image.application.latest}"
+resource "docker_container" "tomcat" {
+  image = "${docker_image.tomcat.latest}"
   must_run = true
-  name  = "application"
+  name  = "tomcat"
      ports {
         internal = 8080
         external = 8080
@@ -11,6 +11,6 @@ resource "docker_container" "application" {
 }
 
 # Find the latest Ubuntu precise image.
-resource "docker_image" "application" {
-  name = "pengbai/docker-supermario"
+resource "docker_image" "tomcat" {
+  name = "tomcat:7.0.90-jre8"
 }
