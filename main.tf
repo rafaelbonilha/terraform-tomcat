@@ -12,5 +12,5 @@ resource "docker_container" "tomcat" {
 
 # Find the latest precise image.
 resource "docker_image" "tomcat" {
-  name = "tomcat"
+  name = "tomcat:7.0.90-jre8"
 }
