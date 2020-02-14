@@ -12,5 +12,5 @@ resource "docker_container" "tomcat7" {
 
 # Find the latest precise image.
 resource "docker_image" "tomcat7" {
-  name = "fabric8/tomcat-7:latest"
+  name = "rafaelbonilha85/tomcat7:7.0.99-java8"
 }
