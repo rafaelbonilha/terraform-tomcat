@@ -1,7 +1,7 @@
 provider "local"{}
 # Start a container
 resource "docker_container" "tomcat7" {
-  image = "${docker_image.tomcat.latest}"
+  image = "${docker_image.tomcat7.latest}"
   must_run = true
   name  = "tomcat7"
      ports {
